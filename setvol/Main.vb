@@ -207,7 +207,7 @@ Module Main
 
             If CommandLine.Contains("DEVICE") Then
 
-                Dim DeviceSpecifiedOnCommandLine As String = CommandLine.Remove(0, CommandLine.IndexOf("DEVICE") + 6).Trim
+                Dim DeviceSpecifiedOnCommandLine As String = CommandLine.Remove(0, CommandLine.IndexOf("DEVICE") + 6).Trim.Trim("""")
 
                 Dim DeviceSpecifiedOnCommandLineInOriginalCase = OriginalCommandLine.Remove(0, OriginalCommandLine.Length - DeviceSpecifiedOnCommandLine.Length)
 
